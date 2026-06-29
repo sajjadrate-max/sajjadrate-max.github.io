@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ur" dir="rtl">
+<html lang="en" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>علم جعفر — سوالوں کا روحانی جواب</title>
-<meta name="description" content="علم جعفر کے ذریعے اپنے سوالوں کا روحانی جواب حاصل کریں۔ مفت آنلائن جفر تجزیہ۔">
-<meta name="keywords" content="علم جفر, علم جعفر, جفر, روحانی علاج, اسلامی علوم, جفر آنلائن">
+<title>Ilm e Jafar — Spiritual Answers to Your Questions</title>
+<meta name="description" content="Get spiritual answers through Ilm e Jafar. Free online Jafar analysis based on Islamic traditional knowledge.">
+<meta name="keywords" content="ilm e jafar, jafar, spiritual guidance, islamic knowledge, jafar online, علم جعفر">
 <meta name="robots" content="index, follow">
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -24,8 +24,10 @@
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
     pageLanguage: 'ur',
+    includedLanguages: 'en,ur,ar,hi,fa,tr,fr,de,es,ru,id,ms,bn,pa,sd,zh-CN,zh-TW,ja,ko,it,pt,nl',
     layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
+    autoDisplay: false,
+    multilanguagePage: true
   }, 'gte');
 }
 </script>
@@ -755,23 +757,25 @@ body { top:0 !important; position:static !important; }
 <div class="site-header">
   <div class="header-bismillah">﷽</div>
   <span class="site-title">علم جعفر</span>
-  <div class="site-subtitle">سوال لکھیں — حروف کا تجزیہ — روحانی جواب پائیں</div>
+  <div class="site-subtitle">Write Your Question — Letter Analysis — Receive Spiritual Answer</div>
   <div class="header-ornament"><span>✦</span></div>
 </div>
 
 <!-- NAV -->
 <div class="site-nav">
-  <a href="#" onclick="showPage('home')">🏠 ہوم</a>
-  <a href="#" onclick="showPage('about')">ہمارے بارے میں</a>
-  <a href="#" onclick="showPage('contact')">رابطہ</a>
-  <button class="lang-btn" onclick="openLang()">🌐 زبان</button>
+  <a href="javascript:void(0)" onclick="showPage('home')">🏠 Home</a>
+  <a href="javascript:void(0)" onclick="showPage('about')">About</a>
+  <a href="javascript:void(0)" onclick="showPage('contact')">Contact</a>
+  <a href="javascript:void(0)" onclick="showPage('disclaimer')">Disclaimer</a>
+  <a href="javascript:void(0)" onclick="showPage('privacy')">Privacy Policy</a>
+  <button class="lang-btn" onclick="openLang()">🌐 Language</button>
 </div>
 
 <!-- COOKIE -->
 <div class="cookie-banner" id="cookieBanner">
-  <p>🍪 یہ ویب سائٹ بہتر تجربے کے لیے cookies استعمال کرتی ہے۔
+  <p>🍪 This website uses cookies to provide a better experience.
   <a href="#" onclick="showPage('privacy')">Privacy Policy</a> دیکھیں۔</p>
-  <button class="cookie-accept" onclick="acceptCookies()">قبول کریں ✓</button>
+  <button class="cookie-accept" onclick="acceptCookies()">Accept ✓</button>
 </div>
 
 <!-- LANGUAGE MODAL -->
@@ -781,7 +785,7 @@ body { top:0 !important; position:static !important; }
       <input type="text" id="ls" placeholder="🔍 Search language..." oninput="filterL(this.value)">
     </div>
     <div class="lang-list" id="ll"></div>
-    <div class="lang-close"><button onclick="closeLang()">✕ بند کریں</button></div>
+    <div class="lang-close"><button onclick="closeLang()">✕ Close</button></div>
   </div>
 </div>
 <div id="gte"></div>
@@ -800,24 +804,24 @@ body { top:0 !important; position:static !important; }
     <div class="input-card-header">
       <div class="input-card-header-icon">📜</div>
       <div>
-        <div class="input-card-header-title">علم جعفر — سوال کریں</div>
-        <div class="input-card-header-sub">نام بن/بنت والدہ کا نام لکھ کر سوال کریں</div>
+        <div class="input-card-header-title">Ilm e Jafar — Ask Your Question</div>
+        <div class="input-card-header-sub">Write your question with name son/daughter of mother's name</div>
       </div>
     </div>
     <div class="notebook-body">
-      <label class="q-label">یا علیم — اپنا سوال یہاں لکھیں:</label>
+      <label class="q-label">Ya Aleem — Write your question here:</label>
       <input type="text" class="q-input" id="qInput" placeholder="جو دل میں آئے لکھ دیں...">
-      <button class="q-btn" onclick="runJafar()">← تجزیہ کریں</button>
+      <button class="q-btn" onclick="runJafar()">← Analyze</button>
       <table class="stair-table notranslate" id="stairTable" translate="no"></table>
     </div>
   </div>
 
   <!-- RESULT SECTION -->
-  <div id="resultSection" class="hidden notranslate" translate="no">
+  <div id="resultSection" class="hidden">
 
     <!-- Jafar Letters -->
     <div class="jafar-card">
-      <div class="jafar-title">حروف جفر</div>
+      <div class="jafar-title">Jafar Letters</div>
       <div class="letters-row notranslate" id="lettersRow" translate="no"></div>
       <div class="formed-word notranslate" id="formedWord" translate="no"></div>
     </div>
@@ -832,24 +836,24 @@ body { top:0 !important; position:static !important; }
     <div class="tafseer-card">
       <div class="tafseer-card-header">
         <div class="tafseer-card-header-icon">✦</div>
-        <div class="tafseer-card-header-title">تشریح اور روحانی حل</div>
+        <div class="tafseer-card-header-title">Analysis & Spiritual Solution</div>
       </div>
       <div class="tafseer-card-body">
 
         <!-- Harf meanings -->
-        <div class="section-label">ہر حرف کے معنی</div>
-        <div class="harf-row notranslate" id="harfRow" translate="no"></div>
+        <div class="section-label">Meaning of Each Letter</div>
+        <div class="harf-row" id="harfRow"></div>
 
         <div class="divider"></div>
 
         <!-- Result text -->
-        <div class="section-label">جفر کا نتیجہ</div>
-        <div class="result-text notranslate" id="resultText" translate="no"></div>
+        <div class="section-label">Jafar Result</div>
+        <div class="result-text" id="resultText"></div>
 
         <!-- Rohani -->
         <div class="rohani-box green" id="rohaniBox">
-          <div class="rohani-box-label">🤲 روحانی حل</div>
-          <div class="rohani-box-text notranslate" id="rohaniText" translate="no"></div>
+          <div class="rohani-box-label">🤲 Spiritual Solution</div>
+          <div class="rohani-box-text" id="rohaniText"></div>
         </div>
 
         <!-- Claude AI جواب -->
@@ -859,8 +863,8 @@ body { top:0 !important; position:static !important; }
         </div>
 
         <div class="rohani-box amber" id="mazajSection" style="display:none;">
-          <div class="rohani-box-label">🌿 مزاج تجزیہ — پہلے نام کے مطابق</div>
-          <div class="notranslate" id="mazajText" translate="no"></div>
+          <div class="rohani-box-label">🌿 Temperament Analysis — Based on First Name</div>
+          <div id="mazajText"></div>
         </div>
 
       </div>
@@ -878,86 +882,86 @@ body { top:0 !important; position:static !important; }
   <div class="hid-card">
     <div class="hid-card-header">
       <div class="tafseer-card-header-icon">📿</div>
-      <div class="hid-card-header-title">ضروری ہدایات — علم جعفر سے فائدہ کے لیے</div>
+      <div class="hid-card-header-title">Important Guidelines — To Benefit from Ilm e Jafar</div>
     </div>
     <div class="hid-card-body">
 
       <div class="hid-list">
-        <div class="hid-item"><div class="hid-num">۱</div><div class="hid-text"><b>نماز پنجگانہ کی پابندی کریں</b> — ہر نماز کے بعد کم از کم ۱۱ مرتبہ درود شریف ضرور پڑھیں۔</div></div>
-        <div class="hid-item"><div class="hid-num">۲</div><div class="hid-text"><b>جھوٹ سے مکمل پرہیز کریں</b> — سچائی ہی علم اور روحانی طاقت کی کنجی ہے۔</div></div>
-        <div class="hid-item"><div class="hid-num">۳</div><div class="hid-text"><b>غیبت، بہتان اور بری زبان سے بچیں</b> — زبان کی پاکیزگی دل کے نور کی علامت ہے۔</div></div>
-        <div class="hid-item"><div class="hid-num">۴</div><div class="hid-text"><b>دل بڑا کریں، معاف کرنا سیکھیں</b> — جس نے تکلیف دی ہو اُسے اللہ کے لیے معاف کر دیں۔</div></div>
-        <div class="hid-item"><div class="hid-num">۵</div><div class="hid-text"><b>روزانہ کم از کم ۷۰ بار استغفراللہ پڑھیں</b> — یہ دل کی صفائی اور گناہوں کی معافی کا راستہ ہے۔</div></div>
-        <div class="hid-item"><div class="hid-num">۶</div><div class="hid-text"><b>والدین کی خدمت اور فرمانبرداری کریں</b> — ماں باپ کی رضا میں اللہ کی رضا ہے۔</div></div>
-        <div class="hid-item"><div class="hid-num">۷</div><div class="hid-text"><b>تنہائی کو پاکیزہ بنائیں</b> — خلوت میں اللہ کو یاد کریں اور گناہوں سے بچیں۔</div></div>
+        <div class="hid-item"><div class="hid-num">1</div><div class="hid-text"><b>Observe five daily prayers</b> — Recite Durood Sharif at least 11 times after each prayer.</div></div>
+        <div class="hid-item"><div class="hid-num">2</div><div class="hid-text"><b>Completely avoid lying</b> — Truthfulness is the key to knowledge and spiritual power.</div></div>
+        <div class="hid-item"><div class="hid-num">3</div><div class="hid-text"><b>Avoid backbiting and foul language</b> — Purity of tongue is a sign of the heart's light.</div></div>
+        <div class="hid-item"><div class="hid-num">4</div><div class="hid-text"><b>Be forgiving</b> — Forgive those who have hurt you for the sake of Allah.</div></div>
+        <div class="hid-item"><div class="hid-num">5</div><div class="hid-text"><b>Recite Astaghfirullah at least 70 times daily</b> — This is the path to purifying the heart and seeking forgiveness.</div></div>
+        <div class="hid-item"><div class="hid-num">6</div><div class="hid-text"><b>Serve and obey your parents</b> — Allah's pleasure lies in the pleasure of parents.</div></div>
+        <div class="hid-item"><div class="hid-num">7</div><div class="hid-text"><b>Keep your solitude pure</b> — Remember Allah in private and avoid sins.</div></div>
       </div>
 
       <div class="hid-divider"></div>
 
-      <div class="hid-section-title">🔹 سوال کرتے وقت ذہن کی کیفیت</div>
+      <div class="hid-section-title">🔹 State of Mind When Asking</div>
       <div class="hid-box">
-        <p>سوال لکھنے سے پہلے <b>وضو کریں</b> اور دو رکعت نفل نماز پڑھیں۔</p>
-        <p>پھر درود شریف ۳ مرتبہ پڑھ کر اللہ تعالیٰ سے <b>سچے دل سے رہنمائی مانگیں۔</b></p>
-        <p>سوال <b>صرف ایک ہی بار</b> کریں — بار بار کرنے سے نتیجہ متاثر ہو سکتا ہے۔</p>
-        <p>یقین رکھیں کہ <b>علم صرف اللہ کے پاس ہے</b> — یہ صرف ایک روحانی رہنمائی ہے۔</p>
+        <p>Before writing your question, <b>perform wudu</b> and pray two rak'ahs of nafl prayer.</p>
+        <p>Then recite Durood Sharif 3 times and sincerely ask Allah for <b>guidance from your heart.</b></p>
+        <p>Ask your question <b>only once</b> — repeating it may affect the result.</p>
+        <p>Remember that <b>knowledge belongs only to Allah</b> — this is only spiritual guidance.</p>
       </div>
 
       <div class="hid-divider"></div>
 
-      <div class="hid-section-title">🔹 سوال لکھنے کا طریقہ</div>
+      <div class="hid-section-title">🔹 How to Write Your Question</div>
       <div class="hid-box">
-        <p>سوال میں <b>نام بن/بنت والدہ کا نام</b> ضرور لکھیں۔</p>
+        <p>Always include <b>Name son/daughter of mother's name</b> in your question.</p>
 
         <div class="topic-group">
-          <div class="topic-label">👶 اولاد</div>
-          <div class="hid-example">شازیہ بنت سکینہ کے حمل میں بیٹا ہے یا بیٹی</div>
-          <div class="hid-example">رابعہ بنت زبیدہ کے حمل میں لڑکا ہے یا لڑکی</div>
+          <div class="topic-label">👶 Children</div>
+          <div class="hid-example">Is Shazia daughter of Sakina having a boy or girl?</div>
+          <div class="hid-example">Is Rabia daughter of Zubaida having a son or daughter?</div>
         </div>
 
         <div class="topic-group">
-          <div class="topic-label">💼 نوکری</div>
-          <div class="hid-example">عمر بن زبیدہ کو اس مہینے نوکری ملے گی یا نہیں</div>
-          <div class="hid-example">وقاص بن آمنہ کو سرکاری نوکری ملے گی یا نہیں</div>
+          <div class="topic-label">💼 Job</div>
+          <div class="hid-example">Will Umar son of Zubaida get a job this month?</div>
+          <div class="hid-example">Will Waqas son of Amna get a government job?</div>
         </div>
 
         <div class="topic-group">
-          <div class="topic-label">🏪 کاروبار</div>
-          <div class="hid-example">رفیق بن حمیدہ کے کاروبار میں رکاوٹ کی کیا وجہ ہے</div>
-          <div class="hid-example">ناصر بن خدیجہ کی دکان میں برکت ہوگی یا نہیں</div>
+          <div class="topic-label">🏪 Business</div>
+          <div class="hid-example">What is causing obstacles in Rafiq son of Hamida's business?</div>
+          <div class="hid-example">Will Nasir son of Khadija's shop have blessings?</div>
         </div>
 
         <div class="topic-group">
-          <div class="topic-label">💍 رشتہ و شادی</div>
-          <div class="hid-example">ثناء بنت نسیم کا رشتہ اس گھر میں ہوگا یا نہیں</div>
-          <div class="hid-example">علی بن مریم کی منگنی پکی ہوگی یا ٹوٹے گی</div>
+          <div class="topic-label">💍 Marriage</div>
+          <div class="hid-example">Will Sana daughter of Naseem's marriage happen in this family?</div>
+          <div class="hid-example">Will Ali son of Maryam's engagement be confirmed or broken?</div>
         </div>
 
         <div class="topic-group">
-          <div class="topic-label">🌙 روحانی مسائل</div>
-          <div class="hid-example">سلمان بن خدیجہ کو جنات کا اثر ہے یا جادو یا بیماری</div>
-          <div class="hid-example">نادیہ بنت عائشہ پر نظر بد کا اثر ہے یا نہیں</div>
+          <div class="topic-label">🌙 Spiritual Issues</div>
+          <div class="hid-example">Is Salman son of Khadija affected by jinn, magic or illness?</div>
+          <div class="hid-example">Is Nadia daughter of Ayesha affected by evil eye?</div>
         </div>
 
         <div class="topic-group">
-          <div class="topic-label">✈️ سفر و ویزہ</div>
-          <div class="hid-example">کامران بن صغرا کا ویزہ اس بار لگے گا یا نہیں</div>
-          <div class="hid-example">شہزاد بن نسیم کا کینیڈا ویزہ اس سال ملے گا یا نہیں</div>
+          <div class="topic-label">✈️ Travel & Visa</div>
+          <div class="hid-example">Will Kamran son of Sughra's visa be approved this time?</div>
+          <div class="hid-example">Will Shahzad son of Naseem get Canadian visa this year?</div>
         </div>
 
         <div class="topic-group">
-          <div class="topic-label">❤️ صحت</div>
-          <div class="hid-example">اسماء بنت رقیہ کی بیماری جلد ٹھیک ہوگی یا نہیں</div>
-          <div class="hid-example">حسن بن آمنہ کا آپریشن کامیاب ہوگا یا نہیں</div>
+          <div class="topic-label">❤️ Health</div>
+          <div class="hid-example">Will Asma daughter of Ruqaiya's illness be cured soon?</div>
+          <div class="hid-example">Will Hassan son of Amna's operation be successful?</div>
         </div>
 
         <div class="topic-group">
-          <div class="topic-label">📚 تعلیم</div>
-          <div class="hid-example">مریم بنت حمیدہ کو یونیورسٹی میں داخلہ ملے گا یا نہیں</div>
-          <div class="hid-example">عدنان بن صغرا کا سرکاری امتحان پاس ہوگا یا نہیں</div>
+          <div class="topic-label">📚 Education</div>
+          <div class="hid-example">Will Maryam daughter of Hamida get university admission?</div>
+          <div class="hid-example">Will Adnan son of Sughra pass the government exam?</div>
         </div>
       </div>
 
-      <div class="hid-note">⚠️ یاد رہے: یہ علم صرف رہنمائی کے لیے ہے — حتمی فیصلہ ہمیشہ اللہ پر توکل کے ساتھ کریں۔</div>
+      <div class="hid-note">⚠️ Note: This knowledge is for guidance only — always make final decisions with trust in Allah.</div>
     </div>
   </div><!-- /hid-card -->
 
@@ -972,50 +976,50 @@ body { top:0 !important; position:static !important; }
 <!-- FOOTER -->
 <div class="site-footer">
   <div class="footer-links">
-    <a href="#" onclick="showPage('about')">ہمارے بارے میں</a>
+    <a href="javascript:void(0)" onclick="showPage('about')">About</a>
     <span class="footer-sep">|</span>
-    <a href="#" onclick="showPage('privacy')">Privacy Policy</a>
+    <a href="javascript:void(0)" onclick="showPage('privacy')">Privacy Policy</a>
     <span class="footer-sep">|</span>
-    <a href="#" onclick="showPage('disclaimer')">Disclaimer</a>
+    <a href="javascript:void(0)" onclick="showPage('disclaimer')">Disclaimer</a>
     <span class="footer-sep">|</span>
-    <a href="#" onclick="showPage('contact')">رابطہ</a>
+    <a href="javascript:void(0)" onclick="showPage('contact')">Contact</a>
     <span class="footer-sep">|</span>
-    <a href="#" onclick="showPage('terms')">Terms</a>
+    <a href="javascript:void(0)" onclick="showPage('terms')">Terms</a>
   </div>
-  <div class="footer-copy">علم جعفر &mdash; تمام حقوق محفوظ ہیں &copy; 2025 | ilmejafar.com</div>
+  <div class="footer-copy">Ilm e Jafar &mdash; All Rights Reserved &copy; 2025 | ilmejafar.com</div>
 </div>
 
 <!-- ══════════ STATIC PAGES ══════════ -->
 
 <div id="page-about" class="main-wrap hidden">
   <div class="page-section">
-    <h2>📿 ہمارے بارے میں</h2>
-    <p><b>ilmejafar.com</b> ایک روحانی رہنمائی کا پلیٹ فارم ہے جو علم جعفر کے روایتی اسلامی علوم کی بنیاد پر بنایا گیا ہے۔</p>
-    <h3>ہمارا مقصد</h3>
-    <p>ہمارا مقصد لوگوں کو روحانی رہنمائی فراہم کرنا ہے۔ علم جعفر صدیوں پرانا اسلامی علم ہے جو حروف اور اعداد کی قوت پر مبنی ہے۔</p>
-    <h3>علم جعفر کیا ہے؟</h3>
-    <p>علم جعفر ایک روایتی اسلامی علم ہے جس میں عربی حروف کی روحانی قوت سے سوالوں کا جواب نکالا جاتا ہے۔ یہ علم حضرت امام جعفر صادق رحمۃ اللہ علیہ سے منسوب ہے۔</p>
-    <h3>ہماری خدمات</h3>
-    <p>✅ مفت آنلائن جفر تجزیہ</p>
-    <p>✅ ہر حرف کے روحانی معنی</p>
-    <p>✅ روحانی وظائف اور آیات</p>
-    <p>✅ مزاج تجزیہ — نام کے حروف سے</p>
-    <p>✅ کوئی registration نہیں — بالکل مفت</p>
-    <p style="font-size:12px;color:#888;margin-top:12px;">یاد رہے: یہ صرف روحانی رہنمائی ہے — حتمی فیصلہ اللہ تعالیٰ پر توکل کے ساتھ کریں۔</p>
+    <h2>📿 About Us</h2>
+    <p><b>ilmejafar.com</b> is a spiritual guidance platform built on the traditional Islamic knowledge of Ilm e Jafar.</p>
+    <h3>Our Purpose</h3>
+    <p>Our purpose is to provide spiritual guidance to people. Ilm e Jafar is a centuries-old Islamic knowledge based on the power of letters and numbers.</p>
+    <h3>What is Ilm e Jafar?</h3>
+    <p>Ilm e Jafar is a traditional Islamic knowledge in which the spiritual power of Arabic letters is used to find answers to questions. This knowledge is attributed to Imam Jafar Sadiq (RA).</p>
+    <h3>Our Services</h3>
+    <p>✅ Free online Jafar analysis</p>
+    <p>✅ Spiritual meaning of each letter</p>
+    <p>✅ Spiritual practices and verses</p>
+    <p>✅ Temperament analysis from name letters</p>
+    <p>✅ No registration required — completely free</p>
+    <p style="font-size:12px;color:#888;margin-top:12px;">Note: This is spiritual guidance only — always make final decisions with trust in Allah.</p>
   </div>
 </div>
 
 <div id="page-disclaimer" class="main-wrap hidden">
   <div class="page-section">
     <h2>⚠️ Disclaimer</h2>
-    <h3>روحانی رہنمائی</h3>
-    <p>ilmejafar.com پر فراہم کی گئی تمام معلومات صرف روحانی رہنمائی اور تعلیمی مقاصد کے لیے ہیں۔</p>
-    <h3>کوئی ضمانت نہیں</h3>
-    <p>ہم کسی بھی نتیجے کی ضمانت نہیں دیتے۔ علم جعفر ایک روایتی علم ہے اور اس کے نتائج مختلف ہو سکتے ہیں۔</p>
-    <h3>طبی مشورہ نہیں</h3>
-    <p>یہ ویب سائٹ کسی بھی طبی، قانونی یا مالی مشورے کا متبادل نہیں ہے۔ سنجیدہ معاملات میں متعلقہ ماہرین سے رجوع کریں۔</p>
-    <h3>اللہ پر توکل</h3>
-    <p>تمام امور اللہ تعالیٰ کے ہاتھ میں ہیں۔ یہ علم صرف رہنمائی کا ذریعہ ہے — حتمی فیصلہ کرنے والا صرف اللہ ہے۔</p>
+    <h3>Spiritual Guidance</h3>
+    <p>All information provided on ilmejafar.com is for spiritual guidance and educational purposes only.</p>
+    <h3>No Guarantee</h3>
+    <p>We do not guarantee any results. Ilm e Jafar is a traditional knowledge and its results may vary.</p>
+    <h3>Not Medical Advice</h3>
+    <p>This website is not a substitute for any medical, legal or financial advice. For serious matters, consult relevant experts.</p>
+    <h3>Trust in Allah</h3>
+    <p>All matters are in Allah's hands. This knowledge is only a means of guidance — Allah alone is the ultimate decision maker.</p>
     <p style="font-size:11px;color:#aaa;margin-top:14px;">آخری اپڈیٹ: جون 2025</p>
   </div>
 </div>
@@ -1023,15 +1027,15 @@ body { top:0 !important; position:static !important; }
 <div id="page-privacy" class="main-wrap hidden">
   <div class="page-section">
     <h2>🔒 Privacy Policy</h2>
-    <p>ilmejafar.com آپ کی privacy کا مکمل احترام کرتا ہے۔</p>
-    <h3>کیا معلومات جمع کی جاتی ہیں؟</h3>
-    <p>ہم آپ کا کوئی ذاتی ڈیٹا محفوظ نہیں کرتے۔ آپ کے سوالات صرف آپ کے browser میں process ہوتے ہیں۔</p>
+    <p>ilmejafar.com fully respects your privacy.</p>
+    <h3>What information is collected?</h3>
+    <p>We do not store any personal data. Your questions are processed only in your browser.</p>
     <h3>Google AdSense</h3>
-    <p>ہم Google AdSense استعمال کرتے ہیں جو cookies استعمال کر سکتا ہے۔ Google کی Privacy Policy کے لیے <a href="https://policies.google.com/privacy" target="_blank">یہاں کلک کریں</a>۔</p>
+    <p>We use Google AdSense which may use cookies. Google کی Privacy Policy کے لیے <a href="https://policies.google.com/privacy" target="_blank">یہاں کلک کریں</a>۔</p>
     <h3>Cookies</h3>
-    <p>یہ ویب سائٹ Google Analytics اور AdSense کی cookies استعمال کر سکتی ہے تاکہ بہتر تجربہ فراہم کیا جا سکے۔</p>
-    <h3>تیسرے فریق</h3>
-    <p>ہم آپ کی کوئی معلومات کسی تیسرے فریق کو فروخت یا share نہیں کرتے۔</p>
+    <p>This website may use Google Analytics and AdSense cookies to provide a better experience.</p>
+    <h3>Third Parties</h3>
+    <p>We do not sell or share any of your information with any third party.</p>
     <p style="font-size:11px;color:#aaa;margin-top:14px;">آخری اپڈیٹ: جون 2025</p>
   </div>
 </div>
@@ -1039,31 +1043,31 @@ body { top:0 !important; position:static !important; }
 <div id="page-terms" class="main-wrap hidden">
   <div class="page-section">
     <h2>📋 Terms of Service</h2>
-    <p>ilmejafar.com استعمال کرنے سے آپ ان شرائط سے متفق ہوتے ہیں۔</p>
-    <h3>استعمال کی شرائط</h3>
-    <p>یہ ویب سائٹ صرف روحانی رہنمائی کے لیے ہے۔ کسی بھی غیر قانونی مقصد کے لیے استعمال ممنوع ہے۔</p>
-    <h3>ملکیت</h3>
-    <p>اس ویب سائٹ کا تمام مواد ilmejafar.com کی ملکیت ہے۔ بغیر اجازت نقل کرنا ممنوع ہے۔</p>
-    <h3>قانون</h3>
-    <p>یہ شرائط پاکستانی قانون کے تحت ہیں۔</p>
+    <p>By using ilmejafar.com, you agree to these terms.</p>
+    <h3>Terms of Use</h3>
+    <p>This website is for spiritual guidance only. Use for any illegal purpose is prohibited.</p>
+    <h3>Ownership</h3>
+    <p>All content on this website is the property of ilmejafar.com. Copying without permission is prohibited.</p>
+    <h3>Law</h3>
+    <p>These terms are governed by Pakistani law.</p>
     <p style="font-size:11px;color:#aaa;margin-top:14px;">آخری اپڈیٹ: جون 2025</p>
   </div>
 </div>
 
 <div id="page-contact" class="main-wrap hidden">
   <div class="page-section">
-    <h2>📬 ہم سے رابطہ کریں</h2>
-    <p>کوئی سوال، تجویز یا مسئلہ ہو تو ہم سے رابطہ کریں۔</p>
+    <h2>📬 Contact Us</h2>
+    <p>If you have any questions, suggestions or issues, please contact us.</p>
     <br>
     <label style="font-size:13px;font-weight:700;color:#7a0000;display:block;margin-bottom:5px;">آپ کا نام</label>
-    <input type="text" class="contact-input" id="cName" placeholder="اپنا نام لکھیں">
+    <input type="text" class="contact-input" id="cName" placeholder="Enter your name">
     <label style="font-size:13px;font-weight:700;color:#7a0000;display:block;margin-bottom:5px;">ای میل</label>
     <input type="email" class="contact-input" id="cEmail" placeholder="your@email.com" style="direction:ltr;">
     <label style="font-size:13px;font-weight:700;color:#7a0000;display:block;margin-bottom:5px;">پیغام</label>
-    <textarea class="contact-input" id="cMsg" rows="4" placeholder="اپنا پیغام لکھیں"></textarea>
-    <button class="contact-btn" onclick="sendContact()">پیغام بھیجیں ←</button>
+    <textarea class="contact-input" id="cMsg" rows="4" placeholder="Write your message"></textarea>
+    <button class="contact-btn" onclick="sendContact()">Send Message →</button>
     <div id="contactSuccess" class="hidden" style="margin-top:12px;background:#e8f5e9;padding:12px;border-radius:8px;color:#2e7d32;text-align:center;font-size:13px;">
-      ✅ شکریہ! آپ کا پیغام مل گیا — جلد جواب دیں گے۔
+      ✅ Thank you! Your message has been received — we will reply soon.
     </div>
     <br>
     <p style="font-size:12px;color:#888;">📧 Email: info@ilmejafar.com</p>
@@ -1116,41 +1120,41 @@ const placeholders = {
 
 function applyLang(code, name) {
   closeLang();
-  // localStorage میں save کریں
   localStorage.setItem('selectedLang', code);
   localStorage.setItem('selectedLangName', name);
 
   var exp = new Date(); exp.setFullYear(exp.getFullYear()+1);
-  document.cookie = 'googtrans=/auto/'+code+'; expires='+exp.toUTCString()+'; path=/';
-  document.cookie = 'googtrans=/auto/'+code+'; expires='+exp.toUTCString()+'; path=/; domain=.'+location.hostname;
+  document.cookie = 'googtrans=/en/'+code+'; expires='+exp.toUTCString()+'; path=/';
+  document.cookie = 'googtrans=/en/'+code+'; expires='+exp.toUTCString()+'; path=/; domain=.'+location.hostname;
+
   var combo = document.querySelector('.goog-te-combo');
-  if (combo) { combo.value = code; var e = document.createEvent('HTMLEvents'); e.initEvent('change',true,true); combo.dispatchEvent(e); }
-  else { location.reload(); }
+  if (combo) {
+    combo.value = code;
+    var e = document.createEvent('HTMLEvents');
+    e.initEvent('change', true, true);
+    combo.dispatchEvent(e);
+  } else {
+    location.reload();
+  }
   document.querySelector('.lang-btn').textContent = '🌐 ' + name;
   var ph = placeholders[code] || placeholders['en'];
   document.getElementById('qInput').placeholder = ph;
 }
 
-// صفحہ کھلنے پر پرانی language لوڈ کریں
 function restoreLang() {
   var code = localStorage.getItem('selectedLang');
   var name = localStorage.getItem('selectedLangName');
-  if (!code || code === 'ur') return;
+  if (!code) return;
 
-  // placeholder update کریں
+  var btn = document.querySelector('.lang-btn');
+  if (btn && name) btn.textContent = '🌐 ' + name;
   var ph = placeholders[code] || placeholders['en'];
   if (ph) document.getElementById('qInput').placeholder = ph;
 
-  // lang button update کریں
-  var btn = document.querySelector('.lang-btn');
-  if (btn && name) btn.textContent = '🌐 ' + name;
-
-  // Google Translate apply کریں
   var exp = new Date(); exp.setFullYear(exp.getFullYear()+1);
-  document.cookie = 'googtrans=/auto/'+code+'; expires='+exp.toUTCString()+'; path=/';
-  document.cookie = 'googtrans=/auto/'+code+'; expires='+exp.toUTCString()+'; path=/; domain=.'+location.hostname;
+  document.cookie = 'googtrans=/en/'+code+'; expires='+exp.toUTCString()+'; path=/';
+  document.cookie = 'googtrans=/en/'+code+'; expires='+exp.toUTCString()+'; path=/; domain=.'+location.hostname;
 
-  // Translate widget کو trigger کریں
   var tries = 0;
   var interval = setInterval(function() {
     var combo = document.querySelector('.goog-te-combo');
@@ -1161,12 +1165,12 @@ function restoreLang() {
       combo.dispatchEvent(e);
       clearInterval(interval);
     }
-    if (++tries > 20) clearInterval(interval);
-  }, 300);
+    if (++tries > 30) clearInterval(interval);
+  }, 200);
 }
 
 window.addEventListener('load', function() {
-  restoreLang();
+  setTimeout(restoreLang, 800);
 });
 
 /* ── Page navigation ── */
@@ -1193,22 +1197,26 @@ function sendContact() {
   btn.textContent = '⏳ بھیجا جا رہا ہے...';
   btn.disabled = true;
 
-  fetch('https://formspree.io/f/xpwzgvkq', {
+  fetch('/.netlify/functions/contact', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name: n, email: e, message: m })
   })
   .then(function(r){ return r.json(); })
-  .then(function(){
-    btn.textContent = 'پیغام بھیجیں ←';
+  .then(function(data){
+    btn.textContent = 'Send Message →';
     btn.disabled = false;
-    document.getElementById('contactSuccess').classList.remove('hidden');
-    document.getElementById('cName').value = '';
-    document.getElementById('cEmail').value = '';
-    document.getElementById('cMsg').value = '';
+    if (data.success) {
+      document.getElementById('contactSuccess').classList.remove('hidden');
+      document.getElementById('cName').value = '';
+      document.getElementById('cEmail').value = '';
+      document.getElementById('cMsg').value = '';
+    } else {
+      alert('خطا: ' + (data.error || 'دوبارہ کوشش کریں'));
+    }
   })
   .catch(function(){
-    btn.textContent = 'پیغام بھیجیں ←';
+    btn.textContent = 'Send Message →';
     btn.disabled = false;
     alert('رابطہ نہیں ہو سکا — دوبارہ کوشش کریں');
   });
@@ -1284,7 +1292,7 @@ function runJafar() {
   document.getElementById('formedWord').textContent = extractedLetters.join('');
 
   // Loading
-  document.getElementById('harfRow').innerHTML = '<div class="loading-dots"><span></span><span></span><span></span></div><div style="color:#888;font-size:13px;text-align:center;padding-bottom:12px;">Claude AI تجزیہ کر رہا ہے</div>';
+  document.getElementById('harfRow').innerHTML = '<div class="loading-dots"><span></span><span></span><span></span></div><div style="color:#888;font-size:13px;text-align:center;padding-bottom:12px;">Claude AI is analyzing...</div>';
   document.getElementById('resultText').textContent = '';
   document.getElementById('rohaniText').textContent = '';
   document.getElementById('mazajText').innerHTML = '';
@@ -1293,45 +1301,16 @@ function runJafar() {
   document.getElementById('resultSection').classList.remove('hidden');
   document.getElementById('resultSection').scrollIntoView({behavior:'smooth', block:'start'});
 
-  // Claude AI - Direct API
-  var prompt = 'آپ علم جعفر کے ماہر عالم ہیں۔\n\nسوال: "' + q + '"\nپہلا نام: "' + words[0] + '"\nجفر حروف: ' + extractedLetters.join(' ، ') + '\n\nچار حصوں میں جواب دیں:\n\n===حروف کے معنی===\nہر حرف کا نام اور اس سوال کے مطابق معنی۔ ہر حرف نئی سطر پر۔\n\n===جفر کا نتیجہ===\nاس مخصوص سوال کا براہ راست جواب۔\n\n===روحانی حل===\nمخصوص وظیفہ یا عمل۔\n\n===مزاج===\n"' + words[0] + '" نام سے مزاج:\nپہلی سطر: مزاج کا نام\nدوسری سطر: خصوصیات\nتیسری سطر: مشورہ\n\nاردو میں جواب دیں۔';
-
-  fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": "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",
-      "anthropic-version": "2023-06-01",
-      "anthropic-dangerous-direct-browser-access": "true"
-    },
-    body: JSON.stringify({
-      model: "claude-haiku-4-5",
-      max_tokens: 1500,
-      messages: [{ role: "user", content: prompt }]
-    })
-  })
-  .then(function(r){ return r.json(); })
+  var prompt = 'آپ علم جعفر کے ماہر عالم ہیں۔\n\nسوال: "' + q + '"\nپہلا نام: "' + words[0] + '"\nجفر حروف: ' + extractedLetters.join(' ، ') + '\n\nچار حصوں میں جواب دیں:\n\n===حروف کے معنی===\nہر حرف کا نام اور اس سوال کے مطابق معنی۔\n\n===جفر کا نتیجہ===\nاس مخصوص سوال کا براہ راست جواب۔\n\n===روحانی حل===\nمخصوص وظیفہ یا عمل۔\n\n===مزاج===\n"' + words[0] + '" سے مزاج:\nپہلی سطر: نام\nدوسری سطر: خصوصیات\nتیسری سطر: مشورہ\n\nاردو میں۔';
+  fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json","x-api-key":"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","anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},body:JSON.stringify({model:"claude-haiku-4-5",max_tokens:1500,messages:[{role:"user",content:prompt}]})})
+  .then(function(r){return r.json();})
   .then(function(data){
-    if (data.error) {
-      document.getElementById('harfRow').innerHTML = '<div style="color:red;padding:8px;">⚠️ ' + data.error.message + '</div>';
-      return;
-    }
-    var text = (data.content && data.content[0]) ? data.content[0].text : '';
-    function parse(t, key) {
-      var rx = new RegExp('===' + key + '===([\s\S]*?)(?:===|$)');
-      var m = t.match(rx);
-      return m ? m[1].trim() : '';
-    }
-    handleClaudeResponse({
-      harfMaani: parse(text, 'حروف کے معنی'),
-      nateeja:   parse(text, 'جفر کا نتیجہ'),
-      rohani:    parse(text, 'روحانی حل'),
-      mazaj:     parse(text, 'مزاج'),
-    });
+    if(data.error){document.getElementById('harfRow').innerHTML='<div style="color:red;padding:8px;">⚠️ '+data.error.message+'</div>';return;}
+    var text=(data.content&&data.content[0])?data.content[0].text:'';
+    function parse(t,key){var rx=new RegExp('==='+key+'===([\s\S]*?)(?:===|$)');var m=t.match(rx);return m?m[1].trim():'';}
+    handleClaudeResponse({harfMaani:parse(text,'حروف کے معنی'),nateeja:parse(text,'جفر کا نتیجہ'),rohani:parse(text,'روحانی حل'),mazaj:parse(text,'مزاج')});
   })
-  .catch(function(err){
-    document.getElementById('harfRow').innerHTML = '<div style="color:red;padding:8px;">⚠️ خطا: ' + err.message + '</div>';
-  });
+  .catch(function(err){document.getElementById('harfRow').innerHTML='<div style="color:red;padding:8px;">⚠️ '+err.message+'</div>';});
 }
 
 
