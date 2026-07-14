@@ -1372,7 +1372,8 @@ function runJafar(){
   ext.forEach(function(c){if(ABJAD[c])extAbjad+=ABJAD[c];});
   var ean=document.getElementById('extractedAbjadNum');
   if(ean) ean.textContent=extAbjad;
-  document.getElementById('tafseerBody').innerHTML='<div class="loading-dots"><span></span><span></span><span></span></div>';
+  var tb=document.getElementById('tafseerBody');
+  tb.innerHTML='';
   var res=document.getElementById('akhbarResult');res.classList.remove('hidden');res.style.display='flex';
   res.scrollIntoView({behavior:'smooth',block:'start'});
 
@@ -1603,6 +1604,7 @@ function runJafar(){
   }
 
   // Countdown timer then show answer
+  var tb2=document.getElementById('tafseerBody');
   var timerDiv=document.createElement('div');
   timerDiv.style.cssText='background:linear-gradient(135deg,#122040,#0a1628);border-radius:14px;padding:28px;text-align:center;direction:rtl;margin-top:8px;border:1px solid rgba(201,168,76,.2);';
   timerDiv.innerHTML=
@@ -1610,7 +1612,7 @@ function runJafar(){
     '<div style="font-size:14px;font-weight:700;color:#c9a84c;margin-bottom:12px;">علم جعفر کی روشنی میں تجزیہ جاری ہے</div>'+
     '<div style="font-size:52px;font-weight:700;color:#f0d878;margin:12px 0;font-family:Arial;text-shadow:0 0 20px rgba(201,168,76,.4);" id="jCountdown">5</div>'+
     '<div style="font-size:11px;color:rgba(201,168,76,.35);">Please wait...</div>';
-  tb.appendChild(timerDiv);
+  tb2.appendChild(timerDiv);
 
   var count=5;
   var timer=setInterval(function(){
