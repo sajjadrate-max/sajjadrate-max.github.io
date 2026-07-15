@@ -1489,7 +1489,7 @@ function runJafar(){
   aiDiv.innerHTML='<div style="font-size:36px;margin-bottom:12px;">🔮</div><div style="font-size:15px;font-weight:700;color:#c9a84c;margin-bottom:6px;">علم جعفر کی روشنی میں تجزیہ جاری ہے</div><div style="font-size:12px;color:rgba(201,168,76,.4);margin-bottom:16px;">جواب تیار ہو رہا ہے...</div><div class="loading-dots" style="margin:0 auto;"><span></span><span></span><span></span></div>';
   tb2.appendChild(aiDiv);
 
-  var gPrompt='آپ علم جعفر کے ماہر روحانی عالم ہیں۔ صرف اردو میں جواب دیں، Hindi یا Hinglish بالکل نہیں۔\n\nسوال: "'+q+'"\nجفر حروف: '+ext.join('، ')+'\n\nہدایات:\n- حروف کا روحانی رجحان بتائیں\n- سوال کا واضح اور براہ راست جواب دیں\n- صحیح قرآنی آیت شامل کریں\n- صرف درست اسلامی وظائف دیں\n\n===جفر کا نتیجہ===\nیہاں سوال کا واضح جواب لکھیں (3-4 جملے صرف)\n===روحانی حل===\nیہاں مخصوص وظیفہ اور دعا لکھیں (2-3 جملے صرف)\n\nیاد رہے: صرف اردو، مختصر اور واضح جواب';
+  var gPrompt='آپ علم جعفر کے ماہر ہیں۔ صرف اردو میں جواب دیں۔\n\nسوال: "'+q+'"\nجفر حروف: '+ext.join('، ')+'\n\n===جفر کا نتیجہ===\nصرف 3 جملے: حروف کا رجحان، سوال کا واضح جواب، ایک صحیح قرآنی آیت (سورہ نمبر اور آیت نمبر کے ساتھ)۔\n\n===روحانی حل===\nصرف یہ بتائیں: کون سی سورت، کتنی بار، کتنے دن۔ زیادہ سے زیادہ 2 وظیفے۔ کوئی غیر ضروری تفصیل نہیں۔\n\nمختصر رہیں۔ Hindi یا Hinglish بالکل نہیں۔ جھوٹی قرآنی آیات نہیں بنانی۔';
 
   fetch('https://api.groq.com/openai/v1/chat/completions',{
     method:'POST',
