@@ -1493,17 +1493,23 @@ function runJafar(){
 
 
 
-  fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AQ.Ab8RN6JlRRFyu2y8_hg4-VBAH-5NtlP36kHTEPoNQgKNzqEigA',{
+  fetch('https://api.anthropic.com/v1/messages',{
     method:'POST',
-    headers:{'Content-Type':'application/json'},
+    headers:{
+      'Content-Type':'application/json',
+      'x-api-key':'YOUR_API_KEY_HERE',
+      'anthropic-version':'2023-06-01',
+      'anthropic-dangerous-direct-browser-access':'true'
+    },
     body:JSON.stringify({
-      contents:[{parts:[{text:gPrompt}]}],
-      generationConfig:{maxOutputTokens:800,temperature:0.7}
+      model:'claude-haiku-4-5-20251001',
+      max_tokens:300,
+      messages:[{role:'user',content:'علم جعفر ماہر ہیں۔ اردو میں مختصر جواب دیں۔\n\nسوال: "'+q+'"\nحروف: '+ext.join('،')+'\n\n===نتیجہ===\nصرف 2 جملے: حروف کا رجحان اور واضح جواب۔\n\n===وظیفہ===\nصرف ایک وظیفہ: نام — تعداد — دن'}]
     })
   }).then(function(res){return res.json();}).then(function(d){
     aiDiv.innerHTML='';
     var text='';
-    try{text=d.candidates[0].content.parts[0].text;}catch(e){}
+    try{text=d.content[0].text;}catch(e){}
     if(!text){showFallback(aiDiv,ext,q);return;}
     var parts=text.split('===');
     var nt='',rh='';
