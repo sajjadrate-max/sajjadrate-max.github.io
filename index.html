@@ -1527,7 +1527,10 @@ function runJafar(){
     aiDiv.innerHTML='';
     var text='';
     try{
-  text = d.output[0].content[0].text;
+  text =
+    d.output_text ||
+    d.output?.[0]?.content?.[0]?.text ||
+    "";
 }catch(e){
   text = "";
     }
