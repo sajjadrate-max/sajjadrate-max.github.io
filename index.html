@@ -1520,11 +1520,13 @@ function runJafar(){
     headers:{
       'Content-Type':'application/json',
     },
-    body:JSON.stringify({
-      model:'claude-haiku-4-5-20251001',
-      max_tokens:200,
-      messages:[{role:'user',content:'علم جعفر۔اردو میں۔\nسوال:"'+q+'"\nحروف:'+ext.join('،')+'\n\n===نتیجہ===\n2 جملے میں جواب\n===وظیفہ===\n1 وظیفہ: نام-تعداد-دن'}]
-    })
+    body: JSON.stringify({
+  prompt:
+    'علم جعفر۔اردو میں۔\n' +
+    'سوال:"' + q + '"\n' +
+    'حروف:' + ext.join('،') +
+    '\n\n===نتیجہ===\n2 جملوں میں جواب\n===وظیفہ===\n1 وظیفہ: نام، تعداد، دن'
+})
   }).then(function(res){return res.json();}).then(function(d){
     aiDiv.innerHTML='';
     var text='';
