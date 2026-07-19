@@ -1530,7 +1530,11 @@ function runJafar(){
   }).then(function(res){return res.json();}).then(function(d){
     aiDiv.innerHTML='';
     var text='';
-    try{text=d.content[0].text;}catch(e){}
+    try{
+  text = d.output[0].content[0].text;
+}catch(e){
+  text = "";
+    }
     if(!text){showFallback(aiDiv,ext,q);return;}
     var parts=text.split('===');
     var nt='',rh='';
