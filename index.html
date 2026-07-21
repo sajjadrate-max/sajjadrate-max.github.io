@@ -6,6 +6,13 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Ilm-e-Jafar — Spiritual Guidance Center</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#0a1628">
+<meta property="og:title" content="Ilm-e-Jafar — Spiritual Guidance Center">
+<meta property="og:description" content="Ilm-e-Jafar — Get spiritual guidance through letters and numbers">
+<meta property="og:image" content="https://www.ilmejafar.com/favicon.svg">
+<meta property="og:url" content="https://www.ilmejafar.com/">
+<meta property="og:type" content="website">
 <meta name="description" content="Ilm-e-Jafar — Get spiritual guidance through letters and numbers">
 <meta name="keywords" content="ilm e jafar, jafar, spiritual guidance, islamic knowledge, علم جعفر">
 <meta name="robots" content="index, follow">
@@ -312,7 +319,7 @@ body{background:#060c18;background-image:radial-gradient(ellipse 120% 60% at 50%
 
 
   <!-- ARTICLES INDEX SECTION -->
-  <div style="width:100%;max-width:500px;margin-top:14px;background:linear-gradient(135deg,#0f1e38,#0a1628);border-radius:14px;overflow:hidden;border:1px solid rgba(201,168,76,.15);box-shadow:0 8px 28px rgba(0,0,0,.3);">
+  <div id="articlesIndexSection" style="width:100%;max-width:500px;margin-top:14px;background:linear-gradient(135deg,#0f1e38,#0a1628);border-radius:14px;overflow:hidden;border:1px solid rgba(201,168,76,.15);box-shadow:0 8px 28px rgba(0,0,0,.3);">
     <div style="background:linear-gradient(135deg,#122040,#0a1628);padding:14px 18px;border-bottom:2px solid #c9a84c;direction:rtl;">
       <span style="font-size:14px;color:#c9a84c;font-weight:700;">📚 مزید مضامین پڑھیں</span>
     </div>
@@ -344,7 +351,7 @@ body{background:#060c18;background-image:radial-gradient(ellipse 120% 60% at 50%
   </div>
 
   <!-- EDUCATIONAL ARTICLE - substantial original content for content quality -->
-  <div style="width:100%;max-width:500px;margin-top:14px;background:linear-gradient(135deg,#0f1e38,#0a1628);border-radius:14px;overflow:hidden;border:1px solid rgba(201,168,76,.15);box-shadow:0 8px 28px rgba(0,0,0,.3);">
+  <div id="eduArticleSection" style="width:100%;max-width:500px;margin-top:14px;background:linear-gradient(135deg,#0f1e38,#0a1628);border-radius:14px;overflow:hidden;border:1px solid rgba(201,168,76,.15);box-shadow:0 8px 28px rgba(0,0,0,.3);">
     <div style="background:linear-gradient(135deg,#122040,#0a1628);padding:14px 18px;border-bottom:2px solid #c9a84c;direction:rtl;">
       <span style="font-size:14px;color:#c9a84c;font-weight:700;">📖 علم جعفر کے بارے میں تفصیلی معلومات</span>
     </div>
@@ -1059,6 +1066,14 @@ function applyLang(code) {
   localStorage.setItem('ilmLang', code);
   document.documentElement.lang = L.lang;
   // Note: dir stays rtl always to prevent layout shift
+
+  // The educational article + articles index sections are Urdu-only content.
+  // Hide them for other languages so mismatched-language text is never shown.
+  var eduSec = document.getElementById('eduArticleSection');
+  var artSec = document.getElementById('articlesIndexSection');
+  var showUrduExtras = (code === 'ur');
+  if (eduSec) eduSec.style.display = showUrduExtras ? '' : 'none';
+  if (artSec) artSec.style.display = showUrduExtras ? '' : 'none';
 
   // Lang bar
   var lb = document.getElementById('langLabel'); if(lb) lb.textContent = L.langLabel;
@@ -1797,14 +1812,12 @@ function openGmail(){
   var msg=document.getElementById('cMsg').value.trim();
   if(!msg){alert('براہ کرم پیغام لکھیں');return;}
   var to='sajjadrate@gmail.com';
-  var mailtoLink='mailto:'+to+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(msg);
-  var a=document.createElement('a');
-  a.href=mailtoLink;
-  a.target='_blank';
-  a.rel='noopener';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
+  var gmailWebLink='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(to)+'&su='+encodeURIComponent(subject)+'&body='+encodeURIComponent(msg);
+  var win=window.open(gmailWebLink,'_blank');
+  if(!win){
+    // popup blocked — fall back to mailto
+    window.location.href='mailto:'+to+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(msg);
+  }
 }
 </script>
 </body>
